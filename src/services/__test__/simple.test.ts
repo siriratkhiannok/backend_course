@@ -1,4 +1,4 @@
-import { SimpleServiceImp } from "./simple";
+import { SimpleServiceImp } from "../simple";
 
 test("SimpleServiceImp ok", () => {
   let service = new SimpleServiceImp();
