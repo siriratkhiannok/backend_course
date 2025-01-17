@@ -8,12 +8,12 @@ export class LoginService implements ILoginService {
       const user = await prisma.user.findUniqueOrThrow({
         where: {
           username: username,
+          password: password,
         },
       });
 
       return user;
     } catch (exception) {
-      console.log(exception);
       return null;
     }
   }
