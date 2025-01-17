@@ -9,6 +9,26 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
+}
+
+model Role {
+  id BigInt @id @default(autoincrement())
+  name String @unique
+  usera User[]
+  userId BigInt?
+
+  @@map("roles")
+}
+
+model User {
+  id BigInt @id @default(autoincrement())
+  username String @unique
+  password String
+  fullname String
+  roles Role[]
+
+
+  @@map("users")
 }
