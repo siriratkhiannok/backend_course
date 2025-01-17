@@ -12,6 +12,8 @@
   "dependencies": {
     "@prisma/client": "^6.2.1",
     "@types/jest": "^29.5.14",
+    "cookie": "^1.0.2",
+    "jose": "^5.9.6",
     "next": "15.1.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
