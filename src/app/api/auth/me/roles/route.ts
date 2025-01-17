@@ -10,7 +10,7 @@ export async function GET(request: Request) {
   if (session) {
     const roles = await loginService.getCurrentRoles(session);
 
-    console.log("roles => ", roles);
+    console.log("roles  ", roles);
     const roleResponse: any = roles.map((r: any) => {
       console.log(r);
       return {
@@ -19,7 +19,7 @@ export async function GET(request: Request) {
       };
     });
 
-    console.log(roleResponse);
+    console.log("roleResponse => ", roleResponse);
 
     return NextResponse.json(roleResponse);
   }
