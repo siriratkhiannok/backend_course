@@ -23,7 +23,6 @@ export class LoginService implements ILoginService {
 
       return currentUser?.roles ?? [];
     }
-
     return [];
   }
   async getUserFromSession(session: string): Promise<User | null> {

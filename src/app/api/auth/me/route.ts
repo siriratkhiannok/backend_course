@@ -8,11 +8,9 @@ export async function GET(request: Request) {
   const session = cookie.get("session")?.value;
   const loginService = new LoginService();
 
-  console.log(session);
   if (session) {
     const user = await loginService.getUserFromSession(session);
 
-    console.log(user);
     return NextResponse.json({
       username: user?.username,
       fullname: user?.fullname,

@@ -54,7 +54,6 @@ test("get role admin", async () => {
       const roles = await loginService.getCurrentRoles(session.session);
       expect(roles).not.toBeNull();
       expect(roles.length).toBeGreaterThan(0);
-      console.log(roles);
     } else {
       expect(adminLogin).toBeNull();
     }

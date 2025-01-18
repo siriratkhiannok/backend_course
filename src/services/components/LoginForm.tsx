@@ -16,8 +16,6 @@ export default function LoginForm() {
         ...form,
       }),
     });
-
-    console.log(response);
   };
   return (
     <>
@@ -40,7 +38,7 @@ export default function LoginForm() {
           id=""
         />
       </div>
-        <button onClick={login}>Login</button>
+      <button onClick={login}>Login</button>
     </>
   );
 }
